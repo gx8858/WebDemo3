@@ -7,9 +7,12 @@
 <title>测试out对象</title>
 </head>
 <body>
+
 <%= "HELLO" %>
 <% out.print("AAAA"); %>
 <% response.getWriter().print("BBBB"); %>
 <% out.print("CCCC"); %>
+
+<%-- 输出的结果是：BBBB HELLO AAAA CCC --%>
 </body>
 </html>
