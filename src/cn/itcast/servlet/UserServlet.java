@@ -17,7 +17,7 @@ import org.junit.Test;
 import cn.itcast.domain.User;
 
 /**
- * 完成数据的封装
+ * 使用内省完成数据的封装
  * @author Administrator
  *
  */
@@ -51,8 +51,8 @@ public class UserServlet extends HttpServlet {
 		}
 		
 		// 如果没有问题，获取user对象中的数据
-		System.out.println("姓名："+user.getUsername());
-		System.out.println("密码："+user.getPassword());
+		System.out.println("姓名：" + user.getUsername());
+		System.out.println("密码：" + user.getPassword());
 	}
 	
 	/**
