@@ -2,6 +2,13 @@ package cn.itcast.domain;
 
 public class Person {
 	
+	/**
+	 * JavaBean Person
+	 * 1.JavaBean规范
+		* 这个java类必须有无参数的构造方法。
+		* 属性私有化。
+		* 提供了public get和set方法。get或者set只要有一个就行。
+	 */
 	private String username;
 	private String password;
 	
