@@ -8,8 +8,6 @@ import org.apache.commons.beanutils.Converter;
 
 /**
  * 完成日期转换
- * @author Administrator
- *
  */
 public class MyConverter implements Converter{
 	
