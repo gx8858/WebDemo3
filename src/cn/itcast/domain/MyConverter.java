@@ -10,6 +10,12 @@ import org.apache.commons.beanutils.Converter;
  * 完成日期转换
  */
 public class MyConverter implements Converter{
+
+//	@Override
+//	public Object convert(Class paramClass, Object paramObject) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 	
 	/**
 	 * obj：用户输入的数据
