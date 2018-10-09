@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h3>把数据封装User对象中</h3>
+<h3>在JSP中封装数据（把数据封装User对象中）</h3>
 <%
 	String username = request.getParameter("username");
 	String password = request.getParameter("password");
