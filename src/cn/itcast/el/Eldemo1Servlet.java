@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Eldemo1Servlet extends HttpServlet {
 
+	/**
+	 * EL从域对象中获取属性的值
+	 */
 	private static final long serialVersionUID = 4854478113428314137L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
