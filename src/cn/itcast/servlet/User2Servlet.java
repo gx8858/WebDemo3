@@ -1,6 +1,7 @@
 package cn.itcast.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
@@ -17,8 +18,6 @@ import cn.itcast.domain.User;
 
 /**
  * 使用BeanUtils来封装数据
- * @author Administrator
- *
  */
 public class User2Servlet extends HttpServlet {
 	
@@ -41,10 +40,16 @@ public class User2Servlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		// 看结果
-		System.out.println("用户名："+user.getUsername());
-		System.out.println("密码："+user.getPassword());
-		System.out.println("余额："+user.getMoney());
-		System.out.println("生日："+user.getBirthday());
+		System.out.println("用户名：" + user.getUsername());
+		System.out.println("密码：" + user.getPassword());
+		System.out.println("余额：" + user.getMoney());
+		System.out.println("生日：" + user.getBirthday());
+		
+		// 或者把时间转化为字符串
+		Date date = user.getBirthday();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String strDate = sdf.format(date);
+		System.out.println("生日：" + strDate);
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
