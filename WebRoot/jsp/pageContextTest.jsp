@@ -7,7 +7,20 @@
 <title>测试PageContext对象</title>
 </head>
 <body>
-
+<%--
+	1.这一个对象顶9个。可以获取另外的8个对象。
+	2.域对象：代表当前的页面的域。
+	3.向其他的域对象中存取值。
+	
+	4.pageContext对象的API
+		* setAttribute(String name, Object value) 
+		* setAttribute(String name, Object value, int scope) 
+		
+		* Object getAttribute(String name)  
+		* Object getAttribute(String name, int scope)  
+		
+		* Object findAttribute(String name)
+ --%>
 <%
 	// 向pageContext域对象中存入值
 	pageContext.setAttribute("username", "美美");
@@ -25,8 +38,10 @@
 <%= request.getAttribute("username") %>
 <%= pageContext.getAttribute("username", pageContext.REQUEST_SCOPE) %>
 
-<!-- 全域查找 -->
+<!-- 全域查找，默认从最小的域中找值，如果找不到，上一个域中找-->
 <%= pageContext.findAttribute("username") %>
+
+<%-- 结果为：美美2 小凤2 小凤2 美美2 --%>
 
 </body>
 </html>
